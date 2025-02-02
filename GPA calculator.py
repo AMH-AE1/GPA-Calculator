@@ -140,6 +140,7 @@ def gpa_calc():
         GPA = total_grade / total_credit
     result =(f'Course: {new_cource}\nYour total Credits is: {total_credit}\nYour total A.K is: {total_grade}\nYour GPA is: {GPA}')
     print (result)
+    output()
 
 def gpa_calc2():
     global Wcredit, Tcredit
@@ -180,7 +181,7 @@ def gpa_calc2():
     print(f'{cc}Your total A.K is: {new_sum}')
     print(f'{cc}Your GPA is: {GPA}')
     result =(f'\nYour total Credits is: {new_credit}\nYour total A.K is: {new_sum}\nYour GPA is: {GPA}')
-
+    output()
     # print(f'{cc}Courses: {list_courses}, Credits: {list_credits}')
 
 def main():
@@ -194,7 +195,7 @@ def main():
         else:
             n = int(input(f'\n{ques}How many courses do you have? : '))
             gpa_calc()
-        output()
+        
     elif user_choice == 2:
         sem = input(f'\n{ques} Is this your first semester? (y/n) : ')
         if sem.lower() == 'n':
@@ -202,7 +203,7 @@ def main():
             gpa_calc2()
         else:
             gpa_calc2()
-        output()
+       
     elif user_choice == 3:  
         single_course()
     elif user_choice == 4:
